@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "jackettdocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[zh-cn]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett 是媒体管理器的索引器代理：把 Sonarr、Radarr、Lidarr 等工具的搜索请求转换成数百个 PT/BT 站点的接口，并以标准 Torznab/Newznab 格式返回结果。本应用运行 LinuxServer.io 官方镜像并以非 root 用户运行；配置和索引器定义保存在应用数据目录。"
+release_note = "1. 首个版本：Jackett 0.24.3030，来自 Docker Hub，以非 root 用户运行；配置与索引器定义保存在应用数据目录。"
+important    = "需要 DockerEngine。请在 Jackett 页面添加站点，再把带 API Key 的 Torznab 地址复制到媒体管理器。Jackett 本身不下载内容，也不内置任何站点。数据在 DockerAppData/jackettdocker。卸载并删除数据前请备份。页面是局域网明文 HTTP。"
+
+[zh-hk]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett 是媒體管理器的索引器代理：把 Sonarr、Radarr、Lidarr 等工具的搜尋請求轉換成數百個 PT/BT 站點的介面，並以標準 Torznab/Newznab 格式傳回結果。本應用執行 LinuxServer.io 官方鏡像並以非 root 使用者執行；設定和索引器定義儲存在應用程式資料目錄。"
+release_note = "1. 首個版本：Jackett 0.24.3030，來自 Docker Hub，以非 root 使用者執行；設定與索引器定義儲存在應用程式資料目錄。"
+important    = "需要 DockerEngine。請在 Jackett 頁面新增站點，再把帶 API Key 的 Torznab 位址複製到媒體管理器。Jackett 本身不下載內容，也不內建任何站點。資料在 DockerAppData/jackettdocker。解除安裝並刪除資料前請備份。頁面是區域網路明文 HTTP。"
+
+[fr-fr]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[de-de]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[it-it]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[es-es]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[hu-hu]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[ja-jp]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[ko-kr]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[pl-pl]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[ru-ru]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[tr-tr]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[pt-pt]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[ar-sa]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[cs-cz]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[he-il]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[id-id]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[nb-no]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[nl-nl]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[sv-se]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[th-th]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[vi-vn]
+name         = "Jackett"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder."
+release_note = "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder."
+important    = "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN."
+
