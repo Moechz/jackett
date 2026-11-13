@@ -1,11 +1,11 @@
 {
   "app_id": "jackettdocker",
   "title": "Jackett",
-  "image": "linuxserver/jackett:v0.24.3030-ls30",
+  "image": "linuxserver/jackett:v0.24.3055-ls35",
   "repo_name": "jackett",
   "github_repo": "jackett",
-  "upstream_version": "0.24.3030",
-  "version": "0.24.3030-1",
+  "upstream_version": "0.24.3055",
+  "version": "0.24.3055-1",
   "mode": "plain",
   "icon_slug": "jackett",
   "container_port": 9117,
@@ -37,20 +37,20 @@
   "upstream_license": "GPL-3.0-only",
   "license": "GPL-3.0-only",
   "official": "https://github.com/linuxserver/docker-jackett",
-  "help": "https://github.com/Moechz/jackett/issues",
+  "help": "https://github.com/Moechz/jackett/blob/main/PRIVACY.md",
   "descript": "Jackett is an indexer proxy for media managers. It translates searches from Sonarr, Radarr, Lidarr and other tools into the APIs of hundreds of torrent trackers, and returns the results in the standard Torznab/Newznab format, so one search API works across many sites. This package runs the official LinuxServer.io Jackett image as a non-root container; its configuration and indexer definitions live in the application data folder.",
-  "important": "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and does not include any tracker. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling with data removal. The page is plain HTTP on the LAN.",
-  "release_note": "1. First release: Jackett 0.24.3030 from Docker Hub, running as a non-root container; configuration and indexer definitions live in the application data folder.",
+  "important": "Requires DockerEngine. Add the indexers you use in the Jackett UI, then copy the Torznab feed URL (with its API key) into your media manager. Jackett does not download anything itself and includes no tracker. It contacts the indexer sites you configure; no telemetry. See the privacy policy. Data is stored in DockerAppData/jackettdocker. Back it up before uninstalling. Plain HTTP on the LAN.",
+  "release_note": "0.24.3055-1: added a privacy policy, upgraded to LinuxServer.io v0.24.3055-ls35, and added the requested webui.bz2 front-end bundle for F22 (the official tool accepts it with a D20 extra-entry warning). Rectified per review comments C3/C5/F22.",
   "translations": {
     "zh-cn": {
       "descript": "Jackett 是媒体管理器的索引器代理：把 Sonarr、Radarr、Lidarr 等工具的搜索请求转换成数百个 PT/BT 站点的接口，并以标准 Torznab/Newznab 格式返回结果。本应用运行 LinuxServer.io 官方镜像并以非 root 用户运行；配置和索引器定义保存在应用数据目录。",
-      "important": "需要 DockerEngine。请在 Jackett 页面添加站点，再把带 API Key 的 Torznab 地址复制到媒体管理器。Jackett 本身不下载内容，也不内置任何站点。数据在 DockerAppData/jackettdocker。卸载并删除数据前请备份。页面是局域网明文 HTTP。",
-      "release_note": "1. 首个版本：Jackett 0.24.3030，来自 Docker Hub，以非 root 用户运行；配置与索引器定义保存在应用数据目录。"
+      "important": "需要 DockerEngine。请在 Jackett 页面添加站点，再把带 API Key 的 Torznab 地址复制到媒体管理器。Jackett 本身不下载内容，也不内置任何站点。它会联系你配置的索引站，不上报遥测。详见隐私政策。数据在 DockerAppData/jackettdocker，卸载前请备份。页面为局域网明文 HTTP。",
+      "release_note": "0.24.3055-1：新增隐私政策，升级到 LinuxServer.io v0.24.3055-ls35，并加入 F22 要求的 webui.bz2 前端包（官方工具以 D20 额外条目提示通过）。已按审核意见 C3/C5/F22 整改。"
     },
     "zh-hk": {
       "descript": "Jackett 是媒體管理器的索引器代理：把 Sonarr、Radarr、Lidarr 等工具的搜尋請求轉換成數百個 PT/BT 站點的介面，並以標準 Torznab/Newznab 格式傳回結果。本應用執行 LinuxServer.io 官方鏡像並以非 root 使用者執行；設定和索引器定義儲存在應用程式資料目錄。",
-      "important": "需要 DockerEngine。請在 Jackett 頁面新增站點，再把帶 API Key 的 Torznab 位址複製到媒體管理器。Jackett 本身不下載內容，也不內建任何站點。資料在 DockerAppData/jackettdocker。解除安裝並刪除資料前請備份。頁面是區域網路明文 HTTP。",
-      "release_note": "1. 首個版本：Jackett 0.24.3030，來自 Docker Hub，以非 root 使用者執行；設定與索引器定義儲存在應用程式資料目錄。"
+      "important": "需要 DockerEngine。請在 Jackett 頁面新增站點，再把帶 API Key 的 Torznab 位址複製到媒體管理器。Jackett 本身不下載內容，也不內建任何站點。它會連線你設定的索引站，不上傳遙測。詳見隱私政策。資料在 DockerAppData/jackettdocker，解除安裝前請備份。頁面為區域網路明文 HTTP。",
+      "release_note": "0.24.3055-1：新增隱私政策，升級到 LinuxServer.io v0.24.3055-ls35，並加入 F22 要求的 webui.bz2 前端包（官方工具以 D20 額外條目提示通過）。已依審核意見 C3/C5/F22 整改。"
     }
   },
   "data_notes": "`config` holds `Jackett/ServerConfig.json`, the indexer definitions and logs; copying it is a complete backup.",
@@ -58,7 +58,9 @@
     "**Runs as a non-root container.** Verified on real hardware as uid 1000.",
     "**One volume.** All configuration, indexer definitions and logs live below `/config`.",
     "**Health check** probes the web UI on container port 9117 (it answers with a redirect).",
-    "**Fixed image tag, never `:latest`**, Docker Hub only, no `privileged`, no `network_mode: host`, no Docker socket, no `cap_add`."
+    "**Fixed image tag, never `:latest`**, Docker Hub only, no `privileged`, no `network_mode: host`, no Docker socket, no `cap_add`.",
+    "**Privacy.** Jackett contacts only the indexer sites you configure (no telemetry); `PRIVACY.md` documents this and is linked from Help.",
+    "**TOS front-end bundle.** The Docker spec needs four files; the review's F22 asks for a `webui.bz2` front-end bundle. `src/webui.bz2` is a tiny HTML redirect to the Jackett UI on port 8019; `TOSAppSelfTestingTool` accepts it with a D20 extra-entry warning."
   ],
   "limitations": [
     "No trackers are included; you add the indexers you have access to.",

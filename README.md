@@ -5,19 +5,21 @@
 
 ## What this is
 
-A four-file TOS Docker application archive (`jackettdocker.tar.gz`) that installs
-Jackett on TOS 7 through the App Center:
+A TOS Docker application archive (`jackettdocker.tar.gz`) with the four core
+files plus the optional `webui.bz2` front-end bundle. It installs Jackett on
+TOS 7 through the App Center:
 
 - `config.ini` — TOS application metadata (`application_type: docker`, id `jackettdocker`)
 - `jackettdocker.lang` — 23-language superset (TOS requires 14)
 - `jackettdocker.svg` — application icon (16928 bytes, 1 SVG elements)
-- `docker-compose.yml` — one service, image `linuxserver/jackett:v0.24.3030-ls30`
+- `docker-compose.yml` — one service, image `linuxserver/jackett:v0.24.3055-ls35`
+- `webui.bz2` — tiny HTML redirect to the Jackett UI on port 8019 (the review's F22 bundle)
 
 ## How it works
 
 | | |
 |---|---|
-| Container image | `linuxserver/jackett:v0.24.3030-ls30` (Docker Hub, used unmodified) |
+| Container image | `linuxserver/jackett:v0.24.3055-ls35` (Docker Hub, used unmodified) |
 | Open | `http://<NAS-IP>:8019/` (container port 9117) |
 | Runs as | non-root, `user: "1000:1000"` |
 | Persistent data | `/config` → `/Volume1/DockerAppData/jackettdocker/config` |
@@ -34,7 +36,14 @@ Jackett on TOS 7 through the App Center:
 - **Runs as a non-root container.** Verified on real hardware as uid 1000.
 - **One volume.** All configuration, indexer definitions and logs live below `/config`.
 - **Health check** probes the web UI on container port 9117 (it answers with a redirect).
+- **TOS front-end bundle.** `src/webui.bz2` is a tiny HTML redirect to the Jackett UI on port 8019; the official tool accepts it with a D20 extra-entry warning.
 - **Fixed image tag, never `:latest`**, Docker Hub only, no `privileged`, no `network_mode: host`, no Docker socket, no `cap_add`.
+
+## Privacy
+
+The package sends no telemetry. Jackett contacts only the indexer sites you
+configure (and may check GitHub for its own updates); the destinations are chosen
+by you. See [PRIVACY.md](PRIVACY.md); the package `help` field points to it.
 
 ## Runtime file manifest
 
@@ -54,8 +63,8 @@ built from the same sources by `scripts/build-dual.sh`:
 
 | Architecture | Package | Size | SHA-256 |
 |---|---|---|---|
-| x86_64 | `jackettdocker_x86_64.tar.gz` | 16953 B | `a73c2ec76d250a2b6d2cd39df3ba72f7acdaf9b56a05f206881daf09a17d26b4` |
-| aarch64 | `jackettdocker_aarch64.tar.gz` | 16954 B | `6e8d3572730179c804301fadaff6109b68cedf7246c4781cf73055b44f8dcdcd` |
+| x86_64 | `jackettdocker_x86_64.tar.gz` | 17511 B | `38054b0f989d34941bdd1e5ba5c46d58525a05b249552ce7dda4721d53c7b619` |
+| aarch64 | `jackettdocker_aarch64.tar.gz` | 17513 B | `47e2f7097c653f9037c83261c526a5a411baaefb8d41f62ab972dd9a7748fc4d` |
 
 The x86_64 package was verified with the full on-device E2E; the aarch64 package
 passes the official `TOSAppSelfTestingTool -c` check and the developer platform's
@@ -66,7 +75,7 @@ automated validation (no ARM host was available for a container E2E).
 ```bash
 scripts/build.sh                  # -> out/jackettdocker.tar.gz + .sha256
 scripts/build.sh 0.24.3030-2   # packaging iteration bump
-scripts/build.sh 0.24.3030-1 aarch64
+scripts/build.sh 0.24.3055-1 aarch64
 ```
 
 The build stages the four files, substitutes the version/platform placeholders,
@@ -92,16 +101,16 @@ bash test/install-and-verify.sh                  # on-device E2E (needs root)
 ## Store submission checklist
 
 1. Public GitHub repo (code + README only).
-2. Release **tag `v0.24.3030-1`**, assets `jackettdocker.tar.gz` +
+2. Release **tag `v0.24.3055-1`**, assets `jackettdocker.tar.gz` +
    `jackettdocker.tar.gz.sha256` (Docker asset naming: `<app_id>.tar.gz`, **no
    platform suffix**).
 3. Developer platform → Add Application: ID `jackettdocker`, package type Docker,
    repository URL, architecture `x86_64`.
-4. Version Management → Add Version `0.24.3030-1` → automated validation → review.
+4. Version Management → Add Version `0.24.3055-1` → automated validation → review.
 
 ## License / branding
 
-Jackett is distributed by its upstream authors under **GPL-3.0-only**. The container image is the official image from Docker Hub (`linuxserver/jackett:v0.24.3030-ls30`) and is used unmodified; no upstream source code is redistributed here. This packaging is an independent community submission by Moechz and is not affiliated with the upstream project or TerraMaster.
+Jackett is distributed by its upstream authors under **GPL-3.0-only**. The container image is the official image from Docker Hub (`linuxserver/jackett:v0.24.3055-ls35`) and is used unmodified; no upstream source code is redistributed here. This packaging is an independent community submission by Moechz and is not affiliated with the upstream project or TerraMaster.
 
 ## Limitations
 

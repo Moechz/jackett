@@ -1,7 +1,7 @@
 # ===========================================================================
 # Jackett for TerraMaster TOS 7 (Docker application)
 # ===========================================================================
-# Upstream image : linuxserver/jackett:v0.24.3030-ls30 (Docker Hub, used unmodified)
+# Upstream image : linuxserver/jackett:v0.24.3055-ls35 (Docker Hub, used unmodified)
 #                  -> https://github.com/linuxserver/docker-jackett
 #
 # Ports   : host 8019 -> container 9117. The host port is in the
@@ -26,7 +26,7 @@
 
 services:
   jackettdocker:
-    image: linuxserver/jackett:v0.24.3030-ls30
+    image: linuxserver/jackett:v0.24.3055-ls35
     container_name: jackettdocker
     restart: unless-stopped
     user: "1000:1000"
