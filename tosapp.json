@@ -5,7 +5,7 @@
   "repo_name": "jackett",
   "github_repo": "jackett",
   "upstream_version": "0.24.3055",
-  "version": "0.24.3055-1",
+  "version": "0.24.3055-3",
   "mode": "plain",
   "icon_slug": "jackett",
   "container_port": 9117,
